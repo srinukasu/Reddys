@@ -18,7 +18,7 @@ public class Govpage {
     public void businessandselfemployed(){
         driver.findElement(By.xpath(".//*[@id='services-and-information']/div/div[2]/ol[1]/li[3]/h3/a")).click();
         String expTitle = "Business and self-employed";
-        String actTitle = driver.findElement(By.xpath(".//*[@id='section']/div/h1")).getText();
+        String actTitle = driver.findElement(By.xpath(".//*[@id='section']/div/h1")).getText();///////
         Assert.assertEquals(expTitle, actTitle);
     }
 
@@ -32,6 +32,7 @@ driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
     }
 
     public void penaltiesforlatefiling(){
+        driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
         driver.findElement(By.xpath(".//*[@id='content']/div/div[1]/div/aside/div/nav/ol/li[2]/a")).click();
     }
 
